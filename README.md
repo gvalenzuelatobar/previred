@@ -68,7 +68,7 @@ http://localhost:8080/usuario/buscar/{id}
 
 - Para eliminar por ID
 DeleteMapping
-http://localhost:8080/usuario/buscar/{id}
+http://localhost:8080/usuario/eliminar/{id}
 
 
 
