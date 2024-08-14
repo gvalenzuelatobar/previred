@@ -1,4 +1,4 @@
-package com.acl.proceso.service.impl;
+package com.move.proceso.service.impl;
 
 import java.util.ArrayList;
 import java.util.Optional;
@@ -10,12 +10,12 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.acl.proceso.entity.Usuario;
-import com.acl.proceso.repository.UsuarioRepositorio;
-import com.acl.proceso.request.UsuarioRequest;
-import com.acl.proceso.response.UsuarioResponse;
-import com.acl.proceso.service.UsuarioService;
-import com.acl.proceso.util.FormatFecha;
+import com.move.proceso.entity.Usuario;
+import com.move.proceso.repository.UsuarioRepositorio;
+import com.move.proceso.request.UsuarioRequest;
+import com.move.proceso.response.UsuarioResponse;
+import com.move.proceso.service.UsuarioService;
+import com.move.proceso.util.FormatFecha;
 
 
 @Service
@@ -137,7 +137,6 @@ public class UsuarioServiceImpl implements UsuarioService{
 	public String eliminar(Long id)  {
 		
 		try {
-			Optional<Usuario> usr =usuarioRepositorio.findById(id);
 			usuarioRepositorio.deleteById(id);		
 		} catch (DataAccessException ex) {
         	log.error(ex.getCause().getMessage());

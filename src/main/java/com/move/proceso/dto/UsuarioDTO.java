@@ -1,4 +1,4 @@
-package com.acl.proceso.dto;
+package com.move.proceso.dto;
 
 import lombok.Data;
 

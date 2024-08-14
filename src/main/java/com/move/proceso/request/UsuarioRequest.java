@@ -1,4 +1,4 @@
-package com.acl.proceso.request;
+package com.move.proceso.request;
 
 import java.util.Date;
 

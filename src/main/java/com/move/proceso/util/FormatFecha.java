@@ -1,4 +1,4 @@
-package com.acl.proceso.util;
+package com.move.proceso.util;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

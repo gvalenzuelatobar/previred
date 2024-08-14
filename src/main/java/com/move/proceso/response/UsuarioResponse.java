@@ -1,4 +1,4 @@
-package com.acl.proceso.response;
+package com.move.proceso.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

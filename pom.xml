@@ -8,11 +8,11 @@
 		<version>3.2.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.acl.proceso</groupId>
+	<groupId>com.move.proceso</groupId>
 	<artifactId>proceso</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>proceso</name>
-	<description>Desafio acl</description>
+	<description>Desafio move</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>

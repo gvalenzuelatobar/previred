@@ -1,4 +1,4 @@
-package com.acl.proceso.exception;
+package com.move.proceso.exception;
 
 
 

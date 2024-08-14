@@ -1,7 +1,7 @@
 # Desafio
 
 Repositorio para obtener el proyecto
-https://github.com/gvalenzuelatobar/desafrio-move.git
+git@github.com:gvalenzuelatobar/previred.git
 
 En el Archivo application.properties, se encuentra la configuracion de Swagger y la BD H2
 En el Archivo schema.sql, se encuentra el script de la creacion de la BD
@@ -30,16 +30,17 @@ Segun el menseaje, se analizo que a la tabla  de entrada se le asigna un los sig
 Pruebas con Postman
 
 - Para el ingreso del mensaje
-POST
-
+PostMapping
 SI el ID NO existe en la BD, se crea en la BD
 http://localhost:8080/usuario/todos
 
 {
     "id": 20,
-    "descripcion": "registro iniciado  ",
-    "fechaCreacion": "2024-12-12",
-    "vigente": true
+    "nombre": "nombre",
+    "username": "username",
+    "password": "password",
+    "edad": 22,
+    "fechaNacimiento":"2024-12-12"
 }
 
 SI el ID  existe en la BD, se actualizan los valor
@@ -57,10 +58,18 @@ SI el ID  existe en la BD, se actualizan los valor
 
 
 - Para obtener todos los valores BD
-GET
+GetMapping
 http://localhost:8080/usuario/todos
 
+- Para buscar por ID
+GetMapping
+http://localhost:8080/usuario/buscar/{id}
+
+
+- Para eliminar por ID
+DeleteMapping
+http://localhost:8080/usuario/buscar/{id}
 
 
 
-# previred
+

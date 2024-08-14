@@ -1,4 +1,4 @@
-package com.acl.proceso.controller;
+package com.move.proceso.controller;
 
 import java.util.ArrayList;
 
@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.acl.proceso.request.UsuarioRequest;
-import com.acl.proceso.response.UsuarioResponse;
-import com.acl.proceso.service.UsuarioService;
+import com.move.proceso.request.UsuarioRequest;
+import com.move.proceso.response.UsuarioResponse;
+import com.move.proceso.service.UsuarioService;
 
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
@@ -35,8 +35,7 @@ public class UsuarioController {
 	
 	@GetMapping("/todos")
     public ArrayList<UsuarioResponse> todos() {
-		log.info("Responde todos los registros ");
-		
+		log.info("Responde todos los registros ");		
 		return  usuarioService.findAll() ;
 		
 	}
@@ -51,7 +50,7 @@ public class UsuarioController {
 	}
 	
 	@Operation(summary = "busca un registro en la BD", description = "Unos datos se insertan en la bd, nombre Usuario")	
-	@PutMapping("/buscar/{id}")
+	@GetMapping("/buscar/{id}")
     public ResponseEntity<UsuarioResponse> buscar(@PathVariable Long id)  {
 		log.debug("Ingreso el registro en la BD");
 		UsuarioResponse tablaResponse =usuarioService.buscar(id);
@@ -67,6 +66,5 @@ public class UsuarioController {
 		return "Se ha eliminado el usuario con el id igual a " + id;
        
 	}
-	
 
 }
